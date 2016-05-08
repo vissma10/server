@@ -32,9 +32,8 @@ import java.util.Enumeration;
 
 public class server extends ActionBarActivity {
 
-
-    NotificationCompat.Builder notification;
-    private static final int uniqueID = 1234;
+     NotificationCompat.Builder notification;
+     private static final int uniqueID = 1234;
 
     private static Button button123;
 
@@ -90,29 +89,27 @@ public class server extends ActionBarActivity {
 
 
 
-    //public void OnClickButtonListener() {
+   /* public void OnClickButtonListener() {
 
-      //    button123 = (Button) findViewById(R.id.button123);
-       //   button123.setOnClickListener(
+        button123 = (Button) findViewById(R.id.button123);
+        button123.setOnClickListener(
 
-        //        new View.OnClickListener() {
-         //           @Override
-         //           public void onClick(View view) {
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
-                     //  Intent intent = new Intent();
-                     //   intent.setAction("com.example.visarsmaja.client");
+                        Intent intent = new Intent("com.example.visarsmaja.server.func");
+                        startActivity(intent);
 
-                      //    startActivity(intent);
-
-             //       }
-             //   }
-       // );
+                    }
+                }
+        );
 
 
-  //  }
+    } */
 
 
-    public void alert123(View v){
+   public void alert123(View v){
 
         notification.setSmallIcon(R.drawable.asd);
         notification.setTicker("ALERT!");
