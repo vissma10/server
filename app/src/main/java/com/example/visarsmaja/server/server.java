@@ -82,6 +82,7 @@ public class server extends ActionBarActivity {
        // OnClickButtonListener();
 
 
+        //create notification and cancel after opened
         notification =  new NotificationCompat.Builder(this);
         notification.setAutoCancel(true);
 
@@ -109,20 +110,27 @@ public class server extends ActionBarActivity {
     } */
 
 
+
+    //Notification
    public void alert123(View v){
 
+       //creating notification
         notification.setSmallIcon(R.drawable.asd);
         notification.setTicker("ALERT!");
         notification.setWhen(System.currentTimeMillis());
         notification.setContentTitle("ALERT !! ");
         notification.setContentText("text ALERT");
 
+       //when clicked brings to the client app
         Intent intent = new Intent("com.example.visarsmaja.appsrvclient.function");
 
+
+       //permission to go to a different app
         PendingIntent pendingintent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         notification.setContentIntent(pendingintent);
 
-        NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+       //calling the notification service
+       NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         nm.notify(uniqueID, notification.build());
 
 
